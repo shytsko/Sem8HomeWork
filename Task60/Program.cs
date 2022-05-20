@@ -10,9 +10,16 @@ if (dimension1 * dimension2 * dimension3 <= count2DNumbers)
 {
     int[,,] array = CreateArray3D(dimension1, dimension2, dimension3);
     for (int d1 = 0; d1 < array.GetLength(0); d1++)
+    {
+        Console.WriteLine($"d1 = {d1}");
         for (int d2 = 0; d2 < array.GetLength(1); d2++)
+        {
             for (int d3 = 0; d3 < array.GetLength(2); d3++)
-                Console.WriteLine($"array[{d1}, {d2}, {d3}] = {array[d1, d2, d3]}");
+                Console.Write($"({d1},{d2},{d3}){array[d1, d2, d3]} ");
+            Console.WriteLine(); 
+        }
+        Console.WriteLine();
+    }
 }
 else
 {
